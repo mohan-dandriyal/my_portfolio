@@ -947,6 +947,7 @@ textarea {
 
 input[type="button"]:hover {
     box-shadow: 0px 0px 5px 1px #fff;
+    background-color: transparent;
 }
 
 /* this is a footer section */
