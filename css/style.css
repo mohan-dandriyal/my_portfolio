@@ -1,0 +1,952 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    src: url(font//Montserrat.ttf);
+    font-family: mont;
+}
+
+:root {
+    --max-width: 1366px;
+    --font: sans-serif;
+    --text: #d8d8d8;
+    --heading-color: #ebebeb;
+    --section-hed-color: #e0e0e0;
+    --btn-color: #2196f3;
+    --hover-text-color: black;
+    --back-color: black;
+    --input-back-color: whitesmoke;
+    --contact-link-color: #888888;
+    --skill-color: #fff6f6;
+    --skils-range-color: #2d2d2d;
+}
+
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    /* overflow: hidden; */
+    background-color: var(--back-color);
+}
+
+.container-fluid {
+    max-width: var(--max-width);
+    min-height: 100px;
+    margin: 0px auto;
+}
+
+header {
+    width: 97%;
+    height: 80px;
+    margin: 0px auto;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: var(--back-color);
+    padding: 0px 30px;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-family: serif;
+    font-size: 40px;
+    color: cornflowerblue;
+    font-weight: 600;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--back-color);
+}
+
+/* --------- togfle button--------- */
+nav .logo .btn {
+    display: block;
+    position: relative;
+    display: none;
+}
+
+nav .logo .btn .btn-2 {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+nav .logo .btn span {
+    width: 40px;
+    height: 2px;
+    display: block;
+    background-color: #ffff;
+}
+
+/* --------- togfle button--------- */
+nav>ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 14px;
+    color: #a9a9a9;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.4s;
+}
+
+nav>ul>li>a:hover {
+    color: var(--btn-color);
+}
+
+nav>ul>li>a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    right: 0;
+    background-color: var(--btn-color);
+    transition: all 0.4s;
+}
+
+nav>ul>li>a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* -------  home section start ------- */
+/* -------  home section start ------- */
+
+#home {
+    width: 96%;
+    min-height: 300px;
+    margin: 0px auto;
+    position: relative;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+#home>.home-row {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#home>.home-row>.home-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home>.home-row>.home-col>ul {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--back-color);
+    gap: 41px;
+    list-style: none;
+}
+
+#home>.home-row>.home-col>ul>li {
+    position: relative;
+}
+
+#home>.home-row>.home-col>ul>li>a {
+    font-size: 30px;
+    position: absolute;
+    line-height: 1.5;
+}
+
+#home>.home-row>.home-col>ul>li>a>i {
+    color: var(--btn-color);
+    transition: all 0.4s;
+}
+
+#home>.home-row>.home-col>ul>li>a>i:hover {
+    color: #009688;
+    font-size: 35px
+}
+
+#home>.home-row>.home-col>span {
+    font-size: 14px;
+    color: #a3a3a3;
+}
+
+#home>.home-row>.home-col>h1 {
+    font-size: 60px;
+    margin: 10px 0px;
+    color: var(--heading-color);
+    font-weight: 100;
+}
+
+#home>.home-row>.home-col>h1>span {
+    font-size: 50px;
+    color: cornflowerblue;
+    animation: text 1s linear infinite alternate;
+}
+
+@keyframes text {
+    from {
+        color: var(--btn-color);
+    }
+
+    to {
+        color: var(--heading-color);
+    }
+}
+
+#home>.home-row>.home-col>p {
+    width: 79%;
+    margin: 10px 0px 40px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+#home>.home-row>.home-col>.my>a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    padding: 13px 33px;
+    background: var(--btn-color);
+    border-radius: 26px;
+    color: var(--heading-color);
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+#home>.home-row>.home-col>.my>a:hover {
+    box-shadow: 0px 0px 5px 1px var(--btn-color);
+}
+
+#home>.home-row>.home-col>.my>a::before {
+    content: 'Hire me';
+    color: var(--hover-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 0%;
+    background-color: var(--input-back-color);
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    transition: all 0.4s;
+}
+
+#home>.home-row>.home-col>.my>a:hover::before {
+    height: 100%;
+    top: 0;
+}
+
+#home>.home-row>.col-2 {
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+#home>.home-row>.col-2>.image {
+    width: 58%;
+    height: 98%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+#home>.home-row>.col-2>.image img {
+    width: 100%;
+}
+
+
+/*  ========>  this is a ((heading tag))  style  <========= */
+/*  ========>  this is a ((heading tag))  style   <========= */
+h2 {
+    width: fit-content;
+    height: fit-content;
+    font-size: 35px;
+    margin-top: 0px;
+    letter-spacing: 0.5px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    color: var(--section-hed-color);
+    position: relative;
+    overflow: hidden;
+}
+
+h2::after {
+    content: '';
+    /* width: 100px */
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 5px solid;
+    animation: border 2.3s linear infinite;
+    overflow: hidden;
+}
+
+h2:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+@keyframes border {
+    0% {
+        width: 0%;
+        right: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 100%;
+        opacity: 1;
+    }
+
+    51% {
+        width: 100%;
+        left: 100%;
+        opacity: 1;
+    }
+
+    99.9% {
+        width: 100%;
+        left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0%;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+/*  =========> this is a ((about)) section   <========= */
+/*  =========> this is a ((about)) section   <========= */
+#about {
+    width: 96%;
+    min-height: 200px;
+    margin: 0px auto 0px;
+    padding: 70px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+#about>.about-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about>.about-col>h3 {
+    width: 35%;
+    margin: 10px 0px 35px;
+    padding: 0px 20px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.3;
+    color: var(--section-hed-color);
+}
+
+#about>.about-row>.about-col-2,
+.about-col-3 {
+    width: 50%;
+    padding: 20px;
+}
+
+#about>.about-row>.about-col-2>p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+#about>.about-row>.about-col-3>.my-details>p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text);
+}
+
+#about>.about-row>.about-col-3>.my-cv {
+    text-align: end;
+    margin: 30px 10px 0px;
+}
+
+#about>.about-row>.about-col-3>.my-cv>a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--heading-color);
+    background: var(--btn-color);
+    border-radius: 25px;
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    right: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+#about>.about-row>.about-col-3>.my-cv>a:hover {
+    box-shadow: 0px 0px 5px 1px var(--btn-color);
+}
+
+#about>.about-row>.about-col-3>.my-cv>a::after {
+    content: 'DOWNLOAD CV';
+    color: var(--hover-text-color);
+    width: 100%;
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--input-back-color);
+    transition: all 0.4s;
+}
+
+#about>.about-row>.about-col-3>.my-cv>a:hover::after {
+    height: 100%;
+    top: 0;
+}
+
+/*  =========>  this is a  ((Service)) section start  <=========  */
+#service {
+    width: 96%;
+    min-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px auto;
+    padding: 70px;
+    overflow: hidden;
+}
+
+#service .service-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#service .service-row .service-col {
+    width: 40%;
+    height: auto;
+    border-radius: 21px;
+    padding: 40px;
+    box-shadow: 0px 0px 6px 0px #818181;
+}
+
+#service .service-row .service-col i {
+    color: #d8d8d8;
+    font-size: 30px;
+}
+
+#service .service-row .service-col h3 {
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#service .service-row .service-col p {
+    color: var(--heading-color);
+    font-size: 15px;
+
+}
+
+/*  =========>  this is a  ((Service)) section start  <=========  */
+#skill {
+    width: 96%;
+    min-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px auto;
+    padding: 70px;
+    overflow: hidden;
+}
+
+#skill>.skill-rows {
+    margin: 20px 0px;
+    justify-content: center;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    box-shadow: 0px 0px 7px 0px #706c6c;
+    border-radius: 30px;
+}
+
+#skill>.skill-rows>.col-skill {
+    width: 22%;
+    padding: 30px 20px 25px;
+    line-height: 1.4;
+    /* box-shadow: 0px 0px 9px 0px #8d8d8d; */
+    text-align: center;
+    border-radius: 10px;
+}
+
+#skill>.skill-rows>.col-skill>i {
+    color: var(--heading-color);
+    font-size: 40px;
+}
+
+#skill>.skill-rows>.col-skill>span {
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin: 13px 0px 0px;
+    display: inline-block;
+}
+
+#skill>.skill-rows>.col-skill>p {
+    margin: 2px 0px 0px;
+    line-height: 1.4;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--text);
+}
+
+
+/*  ========>  this is a ((skill)) section  <========== */
+/*  ========>  this is a ((skill)) section  <========== */
+#skill {
+    width: 96%;
+    min-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px auto;
+    padding: 70px;
+    overflow: hidden;
+}
+
+.skill-row>h2 {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+.skill-map {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 60px;
+    justify-content: center;
+}
+
+.range {
+    margin: 0px 0px;
+    width: 45%;
+    overflow: hidden;
+}
+
+.range>span {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--text);
+}
+
+.range .per {
+    width: 90%;
+    text-align: end;
+    color: var(--text);
+    margin: 0px 0px;
+    width: 80%;
+}
+
+.range .per p {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-1 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    margin: 10px 0px 2px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.skill-1::before {
+    content: '';
+    width: 90%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+
+}
+
+.skill-2 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-2::before {
+    content: '';
+    width: 85%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.skill-3 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-3::before {
+    content: '';
+    width: 80%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.skill-4 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-4::before {
+    content: '';
+    width: 70%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.skill-5 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-5::before {
+    content: '';
+    width: 90%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.skill-6 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-6::before {
+    content: '';
+    width: 65%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.skill-7 {
+    width: 100%;
+    height: 10px;
+    background-color: var(--skils-range-color);
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0px 2px;
+}
+
+.skill-7::before {
+    content: '';
+    width: 70%;
+    height: 100%;
+    background-color: var(--skill-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+/* =======>  this is a project section  <=======  */
+/* =======>  this is a project section  <=======  */
+#project {
+    width: 96%;
+    min-height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px auto;
+    padding: 70px;
+    overflow: hidden;
+}
+
+#project>.project-details>.projct-row {
+    width: 100%;
+    height: auto;
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 55px;
+}
+
+#project>.project-details>.projct-row>.project-col {
+    width: 31%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+#project>.project-details>.projct-row>.project-col>a>img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    filter: grayscale(1);
+}
+
+#project>.project-details>.projct-row>.project-col:hover img {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+/* ------      conatct section start    ------- */
+/* ------      conatct section start    ------- */
+
+#contact {
+    width: 96%;
+    min-height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px auto;
+    padding: 70px;
+    background-color: var(--hover-text-color);
+    overflow: hidden;
+}
+
+#contact>.contact-card-row {
+    color: #ffff;
+    display: flex;
+    column-gap: 30px;
+    row-gap: 35px;
+    margin-bottom: 100px;
+    border: 1px solid #303030;
+    border-radius: 25px;
+    padding: 40px 30px;
+}
+
+#contact>.contact-card-row>.contact-card-col {
+    width: 25%;
+    height: auto;
+    text-align: center;
+    /* border: 1px solid #ffff; */
+    border-radius: 20px;
+}
+
+#contact>.contact-card-row>.contact-card-col h3 {
+    margin-bottom: 10px;
+}
+
+#contact>.contact-card-row>.contact-card-col p {
+    line-height: 1.5;
+}
+
+#contact>.contact-card-row>.contact-card-col .con-icon {
+    color: #ffff;
+    height: 60px;
+    width: 60px;
+    margin: 0px auto;
+    border: 1px solid #484545;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+    transition: 300ms ease-in-out;
+}
+
+#contact>.contact-card-row>.contact-card-col .con-icon:hover {
+    background-color: cornflowerblue;
+    border: none;
+    color: black;
+}
+
+
+#contact>.section-rows {
+    width: 100%;
+}
+
+#contact>.section-rows>.contact-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#contact>.section-rows>.contact-row .contact {
+    width: 45%;
+}
+
+#contact>.section-rows>.contact-row .contact>.con-link>li {
+    list-style: none;
+    margin: 20px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+#contact>.section-rows>.contact-row>.contact>.con-link>li>a {
+    text-decoration: none;
+    line-height: 2.7;
+    /* margin-left:15px; */
+    font-weight: 500;
+    color: var(--contact-link-color);
+}
+
+#contact>.section-rows>.contact-row>.contact>.con-link>li>a>i {
+    padding-right: 10px;
+}
+
+#contact>.section-rows>.contact-row>.contact>.social-link {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+#contact>.section-rows>.contact-row>.contact>.social-link>li>a {
+    font-size: 30px;
+    color: #ffff;
+}
+
+#contact>.section-rows>.contact-row>form {
+    width: 53%;
+    height: 100%;
+    padding-left: 60px;
+    border-left: 1px solid #625f5f;
+}
+
+[type="text"],
+[type="email"] {
+    width: 49%;
+    height: 50px;
+    padding: 0px 10px;
+    margin-top: 20px;
+    background: var(--input-back-color);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+#subject {
+    width: 100%;
+    height: 50px;
+    padding: 0px 10px;
+    background: var(--input-back-color);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin: 30px 0px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    background: var(--input-back-color);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+[type="button"] {
+    width: 35.5%;
+    height: 50px;
+    padding: 0px 10px;
+    margin: 20px 0px;
+    border-radius: 8px;
+    border: none;
+    background: var(--btn-color);
+    color: #f6f6f6;
+    font-size: 17px;
+    /* margin-right:  3px; */
+    transition: all 0.5s;
+}
+
+input[type="button"]:hover {
+    box-shadow: 0px 0px 5px 1px #fff;
+}
+
+/* this is a footer section */
+
+footer {
+    width: 96%;
+    padding: 30px 0px;
+    text-align: center;
+    margin: 20px auto 0px;
+    border-top: 1px solid #2d2d2d;
+    ;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+}
