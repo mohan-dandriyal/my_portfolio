@@ -811,6 +811,17 @@ h2:hover:after {
     line-height: 1.5;
 }
 
+.link-add {
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.4;
+    transition: all 0.4s;
+}
+
+.link-add:hover {
+    color: #2196f3;
+}
+
 #contact>.contact-card-row>.contact-card-col .con-icon {
     color: #ffff;
     height: 60px;

@@ -340,6 +340,8 @@
 @media screen and (max-width: 624px) {
     #service {
         padding: 0;
+    width: 98%;
+    padding: 50px 30px 30px 35px;
     }
 
     #service .service-row .service-col {

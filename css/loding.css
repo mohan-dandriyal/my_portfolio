@@ -23,7 +23,7 @@
     z-index: 99999;
     overflow: hidden;
     top:0;
-    animation: load 2s linear 1 forwards 11s;
+    animation: load 2s linear 1 forwards 6.5s;
  }
 @keyframes load{
     form{
@@ -54,7 +54,7 @@
     position: absolute;
     top: -100%;
     animation: m 1s linear 1 forwards;
-    transition: all 1s;
+    /* transition: all 1s; */
 }
 @keyframes m{
     0%{
@@ -180,7 +180,7 @@
     top:0;
     right: 0;
     z-index: 2;
-    animation:  line 10s linear 1 forwards;
+    animation:  line 6s linear 1 forwards;
 }
 @keyframes line{
     form{
@@ -202,7 +202,7 @@
 
 .line-1::after{
     content: '0%';
-    animation: count 10s linear 1 forwards;
+    animation: count 6s linear 1 forwards;
 }
 @keyframes count{
     0%{
