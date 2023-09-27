@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +9,20 @@
 }
 
 @font-face {
-    src: url(font//Montserrat.ttf);
+    src: url(../font/Montserrat.ttf);
     font-family: mont;
+}
+
+@font-face{
+    src: url(../font/dafont.ttf);
+    font-family: andrew;
 }
 
 :root {
     --max-width: 1366px;
     --font: sans-serif;
-    --text: #d8d8d8;
-    --heading-color: #ebebeb;
+    --text: #ffff;
+    --heading-color: #ffff;
     --section-hed-color: #e0e0e0;
     --btn-color: #2196f3;
     --hover-text-color: black;
@@ -23,6 +31,7 @@
     --contact-link-color: #888888;
     --skill-color: #fff6f6;
     --skils-range-color: #2d2d2d;
+    --type-color: #2196f3;
 }
 
 
@@ -30,7 +39,6 @@
     width: 100%;
     height: auto;
     margin: 0px auto;
-    /* overflow: hidden; */
     background-color: var(--back-color);
 }
 
@@ -61,15 +69,29 @@ nav {
 }
 
 nav .logo {
-    font-family: serif;
-    font-size: 40px;
-    color: cornflowerblue;
-    font-weight: 600;
-    font-style: italic;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--back-color);
+}
+
+nav .logo h3 {
+    font-family: serif;
+    font-size: 30px;
+    color: cornflowerblue;
+    font-weight: 600;
+    font-family: 'Balsamiq Sans', cursive;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--back-color);
+    text-transform: uppercase;
+}
+
+nav .logo h3 span {
+    color: var(--text);
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 /* --------- togfle button--------- */
@@ -90,6 +112,17 @@ nav .logo .btn span {
     height: 2px;
     display: block;
     background-color: #ffff;
+    transition: 200ms ease-in-out;
+}
+
+.bottom {
+    transform-origin: left;
+    transform: rotate(-45deg);
+}
+
+.top {
+    transform-origin: left;
+    transform: rotate(45deg);
 }
 
 /* --------- togfle button--------- */
@@ -104,8 +137,9 @@ nav>ul {
 nav>ul>li>a {
     text-decoration: none;
     font-family: var(--font);
-    font-size: 14px;
-    color: #a9a9a9;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--text);
     font-weight: 600;
     position: relative;
     transition: all 0.4s;
@@ -200,26 +234,15 @@ nav>ul>li>a:hover::after {
 }
 
 #home>.home-row>.home-col>h1 {
-    font-size: 60px;
+    font-size: 50px;
     margin: 10px 0px;
     color: var(--heading-color);
     font-weight: 100;
 }
 
 #home>.home-row>.home-col>h1>span {
-    font-size: 50px;
-    color: cornflowerblue;
-    animation: text 1s linear infinite alternate;
-}
-
-@keyframes text {
-    from {
-        color: var(--btn-color);
-    }
-
-    to {
-        color: var(--heading-color);
-    }
+    font-size: 45px;
+    color: var(--type-color);
 }
 
 #home>.home-row>.home-col>p {
@@ -279,10 +302,13 @@ nav>ul>li>a:hover::after {
 }
 
 #home>.home-row>.col-2>.image {
-    width: 58%;
-    height: 98%;
+    width: 50%;
+    height: fit-content;
     margin: 0px auto;
     overflow: hidden;
+    border: 1px solid rgb(3 169 244 / 90%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 2px rgb(3 169 244 / 90%);
 }
 
 #home>.home-row>.col-2>.image img {
@@ -483,7 +509,7 @@ h2:hover:after {
 #service .service-row .service-col p {
     color: var(--heading-color);
     font-size: 15px;
-
+    line-height: 1.5;
 }
 
 /*  =========>  this is a  ((Service)) section start  <=========  */
@@ -790,7 +816,7 @@ h2:hover:after {
     column-gap: 30px;
     row-gap: 35px;
     margin-bottom: 100px;
-    border: 1px solid #303030;
+    box-shadow: 0px 0px 4px 1px #717171;
     border-radius: 25px;
     padding: 40px 30px;
 }

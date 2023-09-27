@@ -4,7 +4,7 @@
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:870px) {
     header {
         height: 60px;
     }
@@ -16,7 +16,7 @@
     }
 
     nav .logo h3 {
-        font-size: 34px;
+        font-size: 24px;
     }
 
     nav .logo .btn {
@@ -41,6 +41,8 @@
 
     nav>ul>li>a {
         display: block;
+        border-bottom: 1px solid #232222;
+        padding-bottom: 7px;
     }
 
     nav>ul>li>a::after {
@@ -340,8 +342,8 @@
 @media screen and (max-width: 624px) {
     #service {
         padding: 0;
-    width: 98%;
-    padding: 50px 30px 30px 35px;
+        width: 98%;
+        padding: 50px 30px 30px 35px;
     }
 
     #service .service-row .service-col {
@@ -508,7 +510,7 @@
         padding: 50px 50px 40px;
     }
 
-    #contact>.contact-card-row>.contact-card-col  {
+    #contact>.contact-card-row>.contact-card-col {
         width: 43%;
     }
 }
